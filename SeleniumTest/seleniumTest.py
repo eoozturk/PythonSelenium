@@ -7,15 +7,15 @@ class mySeleniumTest(unittest.TestCase):
 
     def setUp(self):
 
-        self.driver = webdriver.Chrome("C:\\Users\\AloTech\\PycharmProjects\\SeleniumTest\\chromedriver.exe")
-        self.driver.get("https://staging1.alo-tech.com/v2/tr/login2.html")
+        self.driver = webdriver.Chrome("Web Driver Local Path \\chromedriver.exe")
+        self.driver.get("Your Test URL")
         self.driver.maximize_window()
 
     def test_mtTest2(self):
 
         #Sisteme login olma
-        self.driver.find_element_by_id("email").send_keys("test@test.com")
-        self.driver.find_element_by_id("password").send_keys("123123")
+        self.driver.find_element_by_id("email").send_keys(" ")
+        self.driver.find_element_by_id("password").send_keys(" ")
         self.driver.find_element_by_class_name("MuiButton-label").click()
         time.sleep(10)
 
@@ -36,9 +36,8 @@ class mySeleniumTest(unittest.TestCase):
         meeting = self.driver.find_element_by_id("agent-status-meeting")
 
         #Statü kontrollerinin yapılması
-        tic = time.perf_counter()
+       
         ready.click()
-        toc = time.perf_counter()
         time.sleep(5)
         sBreak.click()
         time.sleep(5)
@@ -50,5 +49,8 @@ class mySeleniumTest(unittest.TestCase):
         time.sleep(5)
         acw.click()
         time.sleep(5)
-
+        '''
+        toc = time.perf_counter()
+        tic = time.perf_counter()
         print("İşlem Süresi:",toc - tic)
+        '''
